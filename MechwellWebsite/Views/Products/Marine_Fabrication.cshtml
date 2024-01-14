@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "Marine_Fabrication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="~/CSS/navbar.css" rel="stylesheet" />
+<link href="~/CSS/products.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+    function myFunction() {
+        document.getElementById("items").addEventListener("touchstart", startTouch);
+        document.getElementById("items").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                $("#items").carousel("next");
+
+            } else {
+                $("#items").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+
+<!---------------------------Begin-Slider----------------------------->
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 87px;">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+        <li data-target="#demo" data-slide-to="5"></li>
+        <li data-target="#demo" data-slide-to="6"></li>
+        <li data-target="#demo" data-slide-to="7"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" id="items" ontouchmove="myFunction()">
+        <div class="carousel-item active">
+            <img src="~/Images/Marine_Fabrication/7.JPG" />
+            @*<img src="~/Images/Marine_Fabrication/GANGWAY3.JPG" />*@
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/5.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/12.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/13.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/14.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/6.png" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/11.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/8.JPG" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Marine_Fabrication/9.JPG" />
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!---------------------------End-Slider------------------------------->
+<div class="marine-wrapper">
+    <div class="row m-0">
+        <div class="col-lg-12">
+            <h2 class="title">Marine Fabrication</h2>
+        </div>
+        <div class="col-lg-12">
+            <p class="p1">
+                We, at MECHWELL, are avid in creating custom design based on customer specification for creating an ideal installation at the receiving end.
+                Our wide scope of experience in fabrication and finishing of Stainless Steel work makes us the dependable supplier in this sector.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/boat_trailer1.jpg')">
+                        <h2 class="product-title product-title-blue">Boat Trailer</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/gangway_1.JPeG')">
+                        <h4 class="product-title product-title-red" data-target="#ProductModal">Gang way</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/br&hr.jpg')">
+                        <img style=" width:100%; height:100%;  " data-toggle="modal" />
+                        <h4 class="product-title product-title-red">Barrier Railings & Hand Rails</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/BELAYING_PIN.JPG')">
+                        <h4 class="product-title product-title-blue">Belaying Pins</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('../Images/Marine_Fabrication/twin_pol2.png')">
+                        <h4 class="product-title product-title-blue">Twin Bollards</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/ind_pol1.jpg')">
+                        <h4 class="product-title product-title-red">Single Pole Railing & Indicator Pole</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/BOAT RAILING.jpg')">
+                        <h4 class="product-title product-title-red">Boat Railings</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/ROLLER_FRAME.jpg');">
+                        <h4 class="product-title product-title-blue">Roller Frame</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

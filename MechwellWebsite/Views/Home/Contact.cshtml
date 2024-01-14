@@ -1,0 +1,175 @@
+﻿@model MechwellWebsite.Models.Contact
+@{
+    ViewBag.Title = "Contact";
+}s
+
+<link href="~/CSS/navbar.css" rel="stylesheet" />
+<link href="~/CSS/contact.css" rel="stylesheet" />
+<link href="~/CSS/Pop_up.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<div class="row m-0">
+    <div class="col-lg-12" style="margin-top:86px">
+        <div class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15080.409633829226!2d73.00202922828403!3d19.103162793155818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0da9e93097f%3A0xd54c1cc7981cf314!2sKopar+Khairane%2C+Navi+Mumbai%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1557423279332!5m2!1sen!2sin" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row m-0" style="background-color:#062F4F">
+            <div class="col-lg-1" style="padding:0">
+            </div>
+            <div class="col-lg-10" style="padding:0">
+                <div class="contact">
+                    <div class="row m-0">
+                        <div class="col-lg-6" style="margin-top:-10px">
+                            <div class="contact-details">
+                                <div class="row">
+                                    <table style="width:100%;margin-bottom: 15px;">
+                                        <tr>
+                                            <td>
+                                                <a href="https://www.facebook.com/Mechwell-Engineering-653218945292685/" target="_blank">
+                                                    <img class="social-media-icon" src="~/Images/Others/facebook_icon_red.png" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="https://www.instagram.com/mechwell_sd/?igshid=l7fo26yonpcz" target="_blank">
+                                                    <img class="social-media-icon" src="~/Images/Others/instagram_icon_red.png" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="https://www.linkedin.com/company/mechwell-engineering" target="_blank">
+                                                    <img class="social-media-icon" src="~/Images/Others/linkedin_icon_red.png" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="https://m.youtube.com/channel/UCUEZdr4p9VP1y_kT_lJtivQ" target="_blank">
+                                                    <img class="social-media-icon" src="~/Images/Others/youtube_icon_red.png" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <div>
+                                        <h5>Locate Us</h5>
+                                        <p>
+                                            Mechwell Engineering<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Shop no-25, Pawane Gaon,
+                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Thane-Belapur Road,
+                                            Navi Mumbai 400705
+                                        </p>
+                                        <h5>Contact Us</h5>
+                                        <p>
+                                            <i class="fa fa-phone"></i>&nbsp;9029286815
+                                            &nbsp;&nbsp;
+                                            <i class="fa fa-phone"></i>&nbsp;9930949848
+                                        </p>
+                                        <p>
+                                            <a href="mailto:info@mechwellind.com" target="_top" style="color: #464646;">
+                                                <i class="fa fa-envelope"></i>&nbsp;info@mechwellind.com
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" style="margin-top:-35px">
+                            <div class="contact-details">
+                                @using (Html.BeginForm("Contact", "Home"))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-horizontal">
+                                        <h5>Share Your Query</h5>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(Model => Model.NAME, htmlAttributes: new { @class = "form-control alphabetCheck", @placeholder = "Full Name *", @id = "Name" })
+                                            @Html.ValidationMessageFor(model => model.NAME, "", new { @style = "color:red" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(Model => Model.Email, htmlAttributes: new { @class = "form-control", @placeholder = "Email *", @id = "Email" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @style = "color:red" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(Model => Model.CONTACT_NO, htmlAttributes: new { @class = "form-control alphabetCheck1", @placeholder = "Contact *", @id = "Contact", @maxlength = "10" })
+                                            @Html.ValidationMessageFor(model => model.CONTACT_NO, "", new { @style = "color:red" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextAreaFor(Model => Model.QUERY, htmlAttributes: new { @class = "form-control", @placeholder = "Enquiry *", @rows = 3, @id = "QUERY" })
+                                            @Html.ValidationMessageFor(model => model.QUERY, "", new { @style = "color:red" })
+                                        </div>
+                                        <div>
+                                            <input style="width: 100%;" id="SubmitProject" type="Submit" value="Submit" class="btn btn-danger" />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#SubmitProject1").click(function () {
+            if ($("#Name").val() == "") {
+                alert("Kindly enter Name");
+                $('#Name').focus();
+                return false;
+            }
+            if ($("#Email").val() != "") {
+                if (!isEmail($('#Email').val())) {
+                    alert("Please enter valid Email Id");
+                    $('#Email').focus();
+                    return false;
+                }
+            }
+            else {
+                alert("Kindly enter Email Id");
+                $('#Email').focus();
+                return false;
+            }
+            if ($("#CONTACT_NO").val() == "") {
+                alert("Kindly enter Contact Number");
+                $('#CONTACT_NO').focus();
+                return false;
+            }
+            else if (!/^\d{10}$/.test($("#CONTACT_NO").val())) {
+                alert("Invalid Contact; must be 10 digits");
+                $('#CONTACT_NO').focus();
+                return false;
+            }
+
+            if ($("#QUERY").val() == "") {
+                alert("Kindly enter the Enquiry");
+                $('#QUERY').focus();
+                return false;
+            }
+
+        });
+        $(document).ready(function () {
+            $('.alphabetCheck').keypress(function (e) {
+                var value = e.key;
+                if (!/^[a-zA-Z\s]+$/.test(value)) {
+                    $(this).focus();
+                    return false;
+                }
+            });
+            $('.alphabetCheck1').keypress(function (e) {
+                var value = e.key;
+                if (!/^[0-9\s]+$/.test(value)) {
+                    $(this).focus();
+                    return false;
+                }
+            });
+        });
+
+        function isEmail(Email) {
+            var regex = /^(([^<>()\[\]\\.,;:\s"]+(\.[^<>()\[\]\\.,;"\s"]+)*)|(".+"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return regex.test(Email);
+        }
+    });
+
+</script>
+
+

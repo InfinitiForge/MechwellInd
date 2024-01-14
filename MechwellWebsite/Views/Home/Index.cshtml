@@ -1,0 +1,309 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/CSS/index.css" rel="stylesheet" />
+@*<link href="~/CSS/navbar.css" rel="stylesheet" />*@
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<script>
+    function myFunction() {
+        //alert(totalItems);
+        //alert(currentIndex);
+
+        document.getElementById("items").addEventListener("touchstart", startTouch);
+        document.getElementById("items").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            // sliding horizontally
+            if (diffX > 0) {
+                // swiped left
+                //alert("left");
+                $("#items").carousel("next");
+
+            } else {
+                // swiped right
+                //console.log("swiped right");
+                // alert("right");
+                $("#items").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+
+<!---------------------------Begin-Slider----------------------------->
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 87px;">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+        <li data-target="#demo" data-slide-to="5"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" id="items" ontouchmove="myFunction()">
+        <div class="carousel-item active" id="1">
+            <img src="~/Images/VFFS_Packaging_Machine/1.jpeg" />
+        </div>
+        <div class="carousel-item" id="2">
+            <img src="~/Images/Pharm_fabrication/2.jpeg" />
+        </div>
+        <div class="carousel-item" id="3">
+            <img src="~/Images/Marine_Fabrication/boat_trailer.jpg" />
+        </div>
+        <div class="carousel-item" id="4">
+            <img src="~/Images/Slider/Slider4.jpg" alt="Machine" />
+        </div>
+        <div class="carousel-item" id="5">
+            <img src="~/Images/Machining_Works/WATERJET1.jpg" />
+        </div>
+        <div class="carousel-item" id="6">
+            <img src="~/Images/Shredding_machine/2.jpeg" />
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!---------------------------End-Slider------------------------------->
+<!---------------------------Tag line start------------------------->
+@*<div class="col-lg-12">
+        <br />
+        <h1 class="tagline">
+            Power to empower the vision of possibilities
+        </h1>
+
+    </div>*@
+<!---------------------------Tag line end------------------------->
+<!---------------------------Begin Welcome to Mechwell------------------------->
+
+<div class="who-we-are row m-0" style="background-color:#004571">
+    <div class="col-lg-6">
+        <div class="who-we-are-description">
+            <h2 class="title">Welcome to Mechwell</h2>
+            <p>
+                We are 2017 established corporate where we design simple fully automatic packaging machines with pneumatic and PLC operated systems for the same.
+                Automatic packaging machines are very competent due to its advantages of quality,
+                sustainability and efficiently higher speed thereby gaining a higher productivity rate.
+                This is where Mechwell roles for a systematic solution creating one to one choices for the customer.
+                <br />
+                Apart from this we render finest machining operations, pharma and cosmetic machinery and also marine fabrication works. We are well equipped with different conventional and non conventional machines. We deliver precise custom marine fabrication which is ensured by their appearance, stability, quality and durability. Consistency, reliability and versatility are our major driving factor for the pharma and cosmetic machinery.
+                <br />
+                The combination of experience and ability to produce large engaging orders along with standalone complex projects makes us diverse from the competing market. We believe in quality satisfaction and performance and hence develop machines which are robust, durable and reliable.
+                <br />
+                With the dependable service, we also look forward for a long term relationship the customer.
+                <br />
+                <br />
+                <button id="know_more" class="btna info" onclick="window.location='@Url.Action("About", "Home")'">
+                    Know more
+                </button>
+
+            </p>
+        </div>
+    </div>
+    <div class="col-lg-6 who-we-are-img-sec">
+        <div class="who-we-are-image">
+            @*<video controls="controls" class="tm-videobutton" onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                    <source src="../Images/Logo/MECHWELL.mp4" type="video/mp4" />
+
+                </video>*@
+            @*<a href="https://www.youtube.com/watch?v=bDxNBLAFst8&feature=youtu.be">
+
+                </a>*@
+
+            <iframe class="tm-videobutton" src="https://www.youtube.com/embed/bDxNBLAFst8" frameborder="0" onmouseover="this.play()" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div>
+        <br />
+    </div>
+</div>
+
+<!---------------------------End Welcome to Mechwell--------------------------->
+<!---------------------------Begin Products Services------------------------->
+
+<div class="row m-0 ">
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-lg-12">
+                <h3 class="title">
+                    Products
+                </h3>
+            </div>
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Products/VFFS_Packaging_Machine">
+                            <div class="flip-card-front" style="background-image:url('../Images/VFFS_Packaging_Machine/1.jpeg')">
+                                <h4 class="product-title product-title-red">VFFS Packaging Machine</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Products/Pharma_cosmetic">
+                            <div class="flip-card-front" style="background-image:url('../Images/Pharm_fabrication/2.jpeg')">
+                                <h4 class="product-title product-title-blue">Pharma and cosmetic machinery</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Products/Marine_Fabrication">
+                            <div class="flip-card-front" style="background-image:url('../Images/Marine_Fabrication/gangway_1.JPeG')">
+                                <h4 class="product-title product-title-red">Marine Fabrication</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row m-0">
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Products/Machining_Works">
+                            <div class="flip-card-front" style="background-image:url('../Images/Machining_Works/MILLING OPERATION.jpg'); background-size:cover">
+                                <h4 class="product-title product-title-blue">Machining Works</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Products/Shredding_Machine">
+                            <div class="flip-card-front" style="background-image:url('../Images/Shredding_machine/1.jpeg')">
+                                <h4 class="product-title product-title-red">Shredding Machine</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <a href="/Home/Coming_soon">
+                            <div class="flip-card-front" style="background-image:url('../Images/Backgrounds/ps_card_bg.jpg')">
+                                @*<img src="~/Images/Backgrounds/ps_card_bg.jpg" />
+                                    <img src="../Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />*@
+                                <h4 class="product-title product-title-blue">Coming Soon...</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------End Products Services--------------------------->
+        <!---------------------------Begin What We Do------------------------->
+    </div>
+    <div class="what-we-do row m-0">
+        <div class="col-lg-12 what-we-do-img">
+            <br />
+
+        </div>
+        <div class="col-lg-4">
+            <div class="what-we-do-description">
+                <center>
+                    <img src="../Images/Logo/settings2.png" />
+                </center>
+                <br />
+                <h3 class="title1">SERVICES</h3>
+                <br />
+                <p class="p1">
+                    We offer products of high quality by providing comprehensive global product availability, market orientation and technical support availability for competitive prices.
+                    We are seamlessly available and accessible as we upfront for hassle free service every time.
+                    Our commitment towards the quality service begins the day the quotation is raised and is collaboratively maintained so forth.
+                    <br />
+                    <br />
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="what-we-do-description">
+                <center>
+                    <img src="../Images/Logo/to-do2.png" />
+                </center>
+                <br />
+                <h3 class="title1">MANAGEMENT</h3>
+                <br />
+                <p class="p1">
+                    The corporate primary method of measuring customer feedback is on deliverables.
+                    Our team flawlessly monitors, performs and practice ethical standards to successfully provide effective conveyance.
+                    We amalgamate easily with customers manufacturing demands and can also stir in situations of overload or single handed situation that may develop.
+                    <br />
+                    <br />
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="what-we-do-description">
+                <center>
+                    <img src="../Images/Logo/idea2.png" />
+                </center>
+                <br />
+                <h3 class="title1">INNOVATION</h3>
+                <br />
+                <p class="p1">
+                    We believe that with the strategic design and innovative business management competence,
+                    we can understand the challenges and thereby its solution which is developed in the process of unwinding the layers of incurred difficulties.
+                    We are innovation driven company which works with technical R&D as its source of growth in systematic and elaborative manner.
+                    <br />
+                    <br />
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!---------------------------End What We Do--------------------------->
+</div>
+
+
+

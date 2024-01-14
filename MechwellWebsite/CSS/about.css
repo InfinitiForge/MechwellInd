@@ -1,0 +1,299 @@
+﻿body {
+}
+
+
+.cover-img {
+    margin-top: 86px;
+    height: 420px;
+    width: 100%;
+    background-color: #000000;
+    background-image: url('../Images/Machining_Works/69108025-welding-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.company-profile {
+    width: 80%;
+    margin: -100px auto 0 auto;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 1px rgba(207, 206, 206, 0.84);
+    z-index: 111;
+}
+
+    .company-profile h2 {
+        line-height: 120px;
+    }
+
+    .company-profile p {
+        padding: 1% 5% 5% 5%;
+        line-height: 30px;
+    }
+
+.director {
+    width: 70%;
+    background-color: royalblue;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+    .director img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    .director p {
+        color: #fff;
+        padding: 30px;
+        text-align: justify;
+    }
+
+.about-services img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.about-services h4 {
+    padding-top: 10px;
+}
+
+.title {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 90px;
+    text-align: left;
+    font-family: serif;
+    color: #004571;
+    font-size: 58px;
+}
+
+.p1 {
+    text-align: justify;
+    font-family: serif;
+    color: #555;
+}
+
+.main-timeline {
+    font-family: serif;
+    position: relative;
+}
+
+    .main-timeline:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .main-timeline .timeline {
+        width: 50%;
+        padding: 35px 0 0 100px;
+        margin: 0 0 20px 20px;
+        float: right;
+    }
+
+    .main-timeline .timeline-content {
+        color: #555;
+        display: block;
+        position: relative;
+    }
+
+        .main-timeline .timeline-content:hover {
+            text-decoration: none;
+        }
+
+    .main-timeline .timeline-icon {
+        color: #ed1b23;
+        background-color: #fff;
+        font-size: 50px;
+        text-align: center;
+        line-height: 90px;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        border: 2px solid #e7e7e7;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) inset,0 0 10px rgba(0,0,0,0.5),0 0 0 10px #ed1b23;
+        position: absolute;
+        left: -145px;
+        top: -25px;
+    }
+
+    .main-timeline .title {
+        color: #fff;
+        background-color: #ed1b23;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 25px;
+        margin: 0 0 5px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+        .main-timeline .title:before,
+        .main-timeline .title:after {
+            content: '';
+            background-color: #fff;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transform: translateY(-50%);
+            position: absolute;
+            left: -9px;
+            top: 50%;
+        }
+
+        .main-timeline .title:after {
+            background-color: transparent;
+            height: 3px;
+            width: 55px;
+            border-top: 9px dotted #ed1b23;
+            box-shadow: none;
+            border-radius: 0;
+            left: -54px;
+        }
+
+    .main-timeline .description {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0 0 0 10px;
+    }
+
+    .main-timeline .timeline:nth-child(even) {
+        float: left;
+        padding: 35px 100px 0 0;
+        margin: 0 20px 20px 0;
+    }
+
+        .main-timeline .timeline:nth-child(even) .timeline-icon {
+            left: auto;
+            right: -144px;
+        }
+
+        .main-timeline .timeline:nth-child(even) .title:before {
+            left: auto;
+            right: -9px;
+        }
+
+        .main-timeline .timeline:nth-child(even) .title:after {
+            left: auto;
+            right: -54px;
+        }
+
+    .main-timeline .timeline:nth-child(4n+2) .timeline-icon {
+        color: #004571;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) inset,0 0 10px rgba(0,0,0,0.5),0 0 0 10px #004571;
+    }
+
+    .main-timeline .timeline:nth-child(4n+2) .title {
+        background-color: #004571;
+    }
+
+        .main-timeline .timeline:nth-child(4n+2) .title:after {
+            border-color: #004571;
+        }
+
+    .main-timeline .timeline:nth-child(4n+3) .timeline-icon {
+        color: #00C2FF;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) inset,0 0 10px rgba(0,0,0,0.5),0 0 0 10px #00C2FF;
+    }
+
+    .main-timeline .timeline:nth-child(4n+3) .title {
+        background-color: #00C2FF;
+    }
+
+        .main-timeline .timeline:nth-child(4n+3) .title:after {
+            border-color: #00C2FF;
+        }
+
+    .main-timeline .timeline:nth-child(4n+4) .timeline-icon {
+        color: #BA52FF;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) inset,0 0 10px rgba(0,0,0,0.5),0 0 0 10px #BA52FF;
+    }
+
+    .main-timeline .timeline:nth-child(4n+4) .title {
+        background-color: #BA52FF;
+    }
+
+        .main-timeline .timeline:nth-child(4n+4) .title:after {
+            border-color: #BA52FF;
+        }
+
+@media screen and (max-width:480px) {
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even) {
+        width: 100%;
+        padding: 15px 0 0 10px;
+        margin: 0 0 20px;
+    }
+
+        .main-timeline .timeline-icon,
+        .main-timeline .timeline:nth-child(even) .timeline-icon {
+            font-size: 30px;
+            line-height: 48px;
+            height: 50px;
+            width: 50px;
+            left: 0;
+            top: -6px;
+        }
+
+    .main-timeline .title {
+        padding-left: 70px;
+    }
+
+    .main-timeline .description {
+        margin-left: 70px;
+    }
+
+
+    .main-timeline .description {
+        margin-left: 0px;
+    }
+
+
+    .main-timeline .title:before,
+    .main-timeline .title:after {
+        display: none;
+    }
+
+    .main-timeline .title {
+        padding-left: 21px;
+        padding-bottom: 2px;
+    }
+
+
+    .cover-img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+
+    .main-timeline .timeline-content {
+        padding-left: 67px;
+    }
+
+    .title {
+        /*padding-left: 36px;*/
+        font-size: 25px !important;
+        font-weight: 100;
+        line-height: 65px;
+    }
+
+    .p1 {
+        padding-right: 36px;
+        font-size: 16px !important;
+    }
+}

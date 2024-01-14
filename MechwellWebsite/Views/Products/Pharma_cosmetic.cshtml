@@ -1,0 +1,1619 @@
+﻿@{
+    ViewBag.Title = "Pharma_cosmetic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/CSS/navbar.css" rel="stylesheet" />
+<link href="~/CSS/products.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+    function myFunction() {
+        document.getElementById("items").addEventListener("touchstart", startTouch);
+        document.getElementById("items").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                $("#items").carousel("next");
+
+            } else {
+                $("#items").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 87px;">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" id="items" ontouchmove="myFunction()">
+        <div class="carousel-item active">
+            <img src="~/Images/Pharm_fabrication/1.jpeg" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/Pharm_fabrication/2.jpeg" />
+        </div>
+
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="marine-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="title1">Pharma & Cosmetic Machinery</h2>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-12">
+            <h2 class="title2" style="text-align:center;">OINTMENT</h2>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#OMP">
+                <b>OINTMENT MANUFACTURING PLANT</b><br />
+                <hr class="hr1" />
+                MW - OMP25KG TO MW - OMP5000KG
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#HOMOGENIZER">
+                <b>HOMOGENIZER</b><br />
+                <hr class="hr1" />
+                MW - HOMO1 (5 LITRS) TO MW- HOM050 (50000 LTRS)
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#MIXING_VESSEL">
+                <b>MIXING VESSEL</b><br />
+                <hr class="hr1" />
+                MW - MV10LTRS TO MW - MV5000LTRS.
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-12">
+            <h2 class="title2" style="text-align:center">LIQUID SYRUP</h2>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#LMP">
+                <b>LIQUID MANUFACTURING PLANT</b><br />
+                <hr class="hr1" />
+                MW - LMP25LTRS TO MW - LMP5000LTRS
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#FILTER_PRESS">
+                <b>FILTER PRESS</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-12">
+            <h2 class="title2" style="text-align:center">POWDER</h2>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#RMG">
+                <b>RMG (RAPID MIXER GRANULATOR) </b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#BPV">
+                <b>BINDER PREPARATION VESSEL</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#PASTE_KETTLE">
+                <b>PASTE KETTLE</b><br />
+                <hr class="hr1" />
+                MW -SPK 10 TO MW - SPK1000
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#MULTIMILL">
+                <b>MULTIMILL</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#FBD">
+                <b>FBD (FLUID BED DRYER)</b><br />
+                <hr class="hr1" />
+                MW- FB030KG TO MW -FBD500KG
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#MDP">
+                <b>MULTICOLUMN DISTILLATION PLANT</b><br />
+                <hr class="hr1" />
+                MW - MDP80 TO MW- MDP500
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#VIBRO_SIFTER">
+                <b>VIBRO SIFTER</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#COLLOID_MILL">
+                <b>COLLOID MILL</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#CCP">
+                <b>CONVENTIONAL COATING PAN</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#PM">
+                <b>PLANETARY MIXER</b><br />
+                <hr class="hr1" />
+                MW – PLM10KG TO MW – PLM1500KG
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-12">
+            <h2 class="title2" style="text-align:center">BLENDERS</h2>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#RIBBON_BLENDER">
+                <b>RIBBON BLENDER</b><br />
+                <hr class="hr1" />
+                MW-RB25KG TO MW-RB3000KG
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#OCTAGONAL_BLENDER">
+                <b>OCTAGONAL BLENDER</b><br />
+                <hr class="hr1" />
+                MW-OCB10KG TO MW- OCB3000KG
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#DCB">
+                <b>DOUBLE CONE BLENDER </b><br />
+                <hr class="hr1" />
+                MW - DCB25KG TO MW- DCB3000KG
+            </button>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#CB">
+                <b>CONTA BLENDING</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <button class="btna1 info" data-toggle="modal" data-target="#VCB">
+                <b>V CONE BLENDER</b><br />
+                <hr class="hr1" />
+            </button>
+        </div>
+
+    </div>
+    <div class="row">
+        <br />
+    </div>
+</div>
+<!-- Modal -->
+
+<div id="OMP" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">OINTMENT MANUFACTURING PLANT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/ointment.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/ointment2.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            <li>
+                                Ointment Manufacturing Plants are ideal for the pharmaceutical and cosmetic industries for the production of ointment,
+                                creams, toothpaste, lotions and other emulsions and homoginizations.
+                            </li>
+                            <li>To ease cleaning, efficiency of agitators, ease of maintenance.</li>
+                            <li>
+                                The combined action of horizontal blade and specially designed anchor ensures most efficient mixing with shearing action of homoginizer,
+                                important when working with viscous products.
+                            </li>
+                            <li>
+                                Ointment plant comprise components such as manufacturing vessel and agitators with flush bottom valve,
+                                wax/water phase vessel with side mounted fast speed stirrer,
+                                flush bottom valve and conical fitter, manufacturing vessel with double speed anchor and fast speed emulsifier fitted with mechanical seal,
+                                lifting pneumatically for manufacturing vessel, spray ball on top cover for cleaning main vessel,
+                                monitoring of the product temperature with digital indicator on panel,
+                                electric control panel board with all necessary controls.
+                            </li>
+                            <li>
+                                Ointment Manufacturing Plant is very useful for creams, lotions, gels, shampoos, tooth pastes and such preparation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="HOMOGENIZER" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">HOMOGENIZER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            <li>Mechwell High Shear Homogenizers are supremely efficient and rapid in operation and are capable of reducing the mixing times by up to 90%.</li>
+                            <li>
+                                The action of any MECHWELL HOMOGENIZER can be modified with the use of rapidly interchangeable work heads.
+                                This enables any machine to mix, emulsify, homogenize, solubilize, suspend, disperse and disintegrate solids.
+                            </li>
+                        </ul>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Aeration tree</li>
+                            <li>Lower power requirements</li>
+                            <li>Self-pumping</li>
+                            <li>Creates stable emulsions and suspensions</li>
+                            <li>No bypassing</li>
+                            <li>Reduces particle size</li>
+                            <li>Interchangeable heads</li>
+                            <li>Rapidly dissolves solids</li>
+                            <li>Sanitary construction</li>
+                            <li>Accelerates reactions</li>
+                            <li>Easy maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="MIXING_VESSEL" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MIXING VESSEL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/mixing.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/vessel1.jpg" />
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg1.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg2.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg3.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            <li>
+                                Storage vessel & mixing vessels are used to manufacture or store high quality liquids,
+                                ointments and other solutions required by different industries like, Pharmaceutical, chemical, food, bioceutical, cosmetic etc.
+                            </li>
+                            <li>It can be provide either jacketed or non jacketed version.</li>
+                            <li>It can be also available in electric and steam heated version.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="LMP" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">LIQUID MANUFACTURING PLANT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/lmp.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg1.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg2.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/lpg3.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            The Liquid Manufacturing Plants are ideal tools for the pharmaceutical industry for the production of Oral Liquids.
+                            It is specially designed to take care of two critical factors which directly affect the quality of the
+                            liquids with minimum manual handling of liquid.
+                        </p>
+                        <h5>Liquid Manufacturing Plants Consists</h5>
+                        <ul class="p2">
+                            <li>Sugar Melting Vessel.</li>
+                            <li>Pre-filtration unit.</li>
+                            <li>Syrup Manufacturing Vessel.</li>
+                            <li>Filtration unit.</li>
+                            <li>
+                                Storage Vessel.
+                            </li>
+                            <li>
+                                Control Panel.
+                            </li>
+                            <li>
+                                Product Piping.
+                            </li>
+                            <li>
+                                Working Platform.
+                            </li>
+                        </ul>
+                        <h5>Liquid Manufacturing Plants Consists</h5>
+                        <ul class="p2">
+                            <li>The Plant is designed to be operated only by one operator and one helper.</li>
+                            <li>All material transfers are done by vacuum or by transfer pumps.</li>
+                            <li>All the vessels are CGMP (paint free construction)</li>
+                            <li>The gaskets used are of silicon (food grade).</li>
+                            <li>An contact parts are of S.S. 304 quality material (SS316 provided on demand) & finished to class 4B (Mirror) finish and are crevice tree.</li>
+                            <li>The entry of stirrer & high speed emulsifier are from top. In-line Emulsifier (as per customer choice) provided on demand.</li>
+                            <li>All vessels are suitable for internal pressure of 1 Kg. / Sq. cm. and hence can be sterilized.</li>
+                            <li>
+                                All pipes, pipe fittings and valves are of SS304/ SS316 (as per customer requirement) seamless quality,
+                                internally electro polished, with tri-clover ended joints.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="FILTER_PRESS" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">FILTER PRESS</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            A filter press is a piece of equipment used in liquid/solid separation.
+                            Specifically, the filter press separates the liquids and solids using pressure filtration,
+                            wherein slurry is pumped into the filter press and is dewatered under pressure.
+                            Basically, each fitter press is designed based on the volume type of slurry that needs to be dewatered.
+                            Mechwell is a trusted expert in liquid/solid separation and offers a wide range of filter press types and
+                            capacities to suit specific application needs for trouble-free, economical dewatering.
+                        </p>
+                        <h5>Technical Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>TYPES</th>
+                                    <th>DIAMETER OF PLATE</th>
+                                    <th>NO. OF PLATES</th>
+                                    <th>FILTERING AREA M2</th>
+                                    <th>CAKE HOLDING CAPACITY (LTRS)</th>
+                                    <th>CAPACITY (LTR/HR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MW-8x6</td>
+                                    <td>8”</td>
+                                    <td>6</td>
+                                    <td>0.198</td>
+                                    <td>4.50</td>
+                                    <td>400</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-8x8</td>
+                                    <td>8”</td>
+                                    <td>8</td>
+                                    <td>0.254</td>
+                                    <td>5.78</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+
+                                    <td>MW-14x8</td>
+                                    <td>14”</td>
+                                    <td>8</td>
+                                    <td>0.756</td>
+                                    <td>27.00</td>
+                                    <td>1500</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-14x10</td>
+                                    <td>14”</td>
+                                    <td>10</td>
+                                    <td>0.924</td>
+                                    <td>35.00</td>
+                                    <td>1800</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-18x8	</td>
+                                    <td>18”D</td>
+                                    <td>8</td>
+                                    <td>1.270</td>
+                                    <td>51.00</td>
+                                    <td>2500</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-18x15</td>
+                                    <td>18”S</td>
+                                    <td>15</td>
+                                    <td>2.270</td>
+                                    <td>44.00</td>
+                                    <td>4500</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-18x12</td>
+                                    <td>18”D</td>
+                                    <td>12</td>
+                                    <td>1.840</td>
+                                    <td>78.00</td>
+                                    <td>3700</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-18x23</td>
+                                    <td>18”S</td>
+                                    <td>23</td>
+                                    <td>3.400</td>
+                                    <td>65.00</td>
+                                    <td>6800</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-24x12</td>
+                                    <td>24”D</td>
+                                    <td>12</td>
+                                    <td>3.430</td>
+                                    <td>148.00</td>
+                                    <td>6700</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-24x23</td>
+                                    <td>24”S</td>
+                                    <td>23</td>
+                                    <td>6.336</td>
+                                    <td>12.00</td>
+                                    <td>12600</td>
+                                </tr>
+                                <tr>
+                                    <td>MW-24x23</td>
+                                    <td>24”S</td>
+                                    <td>23</td>
+                                    <td>6.336</td>
+                                    <td>12.00</td>
+                                    <td>12600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="RMG" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RMG (RAPID MIXER GRANULATOR)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-desc1">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            The Mechwell Rapid Mixer Granulator ideal mixer is widely used in pharmaceutical,
+                            chemicals and food industry for wet granulation, dry mixing, and wax granulation along with aqueous and solvent granulation.
+                            The Skyline RMG is so design to achieve efficient, sate and hygienic mixing by reducing processing time,
+                            homogeneous mixing, even distribution of binder, wetting, nucleation and granule size growth with sampling provision for
+                            in process analysis and proven safety during processing, complaint to CGMP norms.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Granulation process requires less binder solution. Granulation is achieved within a short time.</li>
+                            <li>Greater densification and production of less friable granules.</li>
+                            <li>The granulator produces reproducible less friable granules with a uniform particle size distribution</li>
+                            <li>High-shear granulator minimizes the exposure of drug dust to workers due to reduced process dust generation.</li>
+                            <li>Granulation endpoint is predictable while using high-shear granulator. Requires short drying times.</li>
+                        </ul>
+                        <h5>Technical Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL (SKY)</th>
+                                    <th>RMG -60 </th>
+                                    <th>RMG -100</th>
+                                    <th>RMG -150</th>
+                                    <th>RMG -200</th>
+                                    <th>RMG -250</th>
+                                    <th>RMG -400</th>
+                                    <th>RMG -600</th>
+                                    <th>RMG -800</th>
+                                    <th>RMG -1000</th>
+                                    <th>RMG -1200</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Goss Capacity (In Ltrs)</td>
+                                    <td>60</td>
+                                    <td>100</td>
+                                    <td>150</td>
+                                    <td>200</td>
+                                    <td>250</td>
+                                    <td>400</td>
+                                    <td>600</td>
+                                    <td>800</td>
+                                    <td>1000</td>
+                                    <td>1200</td>
+                                </tr>
+                                <tr>
+                                    <td>Working Capacity (In Ltrs.)</td>
+                                    <td>48</td>
+                                    <td>80</td>
+                                    <td>120</td>
+                                    <td>160</td>
+                                    <td>200</td>
+                                    <td>320</td>
+                                    <td>480</td>
+                                    <td>640</td>
+                                    <td>800</td>
+                                    <td>960</td>
+                                </tr>
+                                <tr>
+                                    <td>Working Capacity (in Kgs.)0.5BD</td>
+                                    <td>15-20</td>
+                                    <td>25-35</td>
+                                    <td>40-55</td>
+                                    <td>55-80</td>
+                                    <td>65-90</td>
+                                    <td>100-140</td>
+                                    <td>150-215</td>
+                                    <td>200-280</td>
+                                    <td>250-350</td>
+                                    <td>250-350</td>
+                                </tr>
+                                <tr>
+                                    <td>Impeller Motor HP/kW</td>
+                                    <td>5/3.7</td>
+                                    <td>10/7.5</td>
+                                    <td>15/11.2</td>
+                                    <td>20/15</td>
+                                    <td>20/15</td>
+                                    <td>40/30</td>
+                                    <td>50/37.5</td>
+                                    <td>60/45</td>
+                                    <td>60/45</td>
+                                    <td>75/56  </td>
+                                </tr>
+                                <tr>
+                                    <td>Chopper Motor- HP/kW</td>
+                                    <td>2/1.5</td>
+                                    <td>3/2.2</td>
+                                    <td>5/3.7</td>
+                                    <td>5/3.7</td>
+                                    <td>5/3.7</td>
+                                    <td>7.5/5.6</td>
+                                    <td>7.5/5.6</td>
+                                    <td>7.5/10</td>
+                                    <td>10/7.5</td>
+                                    <td>10/7.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Lab Models</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODELS</th>
+                                    <th>RMG -1</th>
+                                    <th>RMG -2</th>
+                                    <th>RMG -3</th>
+                                    <th>RMG -4</th>
+                                    <th>RMG -5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gross Capacity (In Ltrs)</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Working Capacity (In Ltrs)</td>
+                                    <td>0.8</td>
+                                    <td>1.6</td>
+                                    <td>2.4</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Working Capacity 0.5 BD</td>
+                                    <td>0.15-0.4kg</td>
+                                    <td>0.3-0.8kg</td>
+                                    <td>0.45-1.2kg</td>
+                                    <td>0.75-2kg</td>
+                                    <td>1.5-4kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Impeller Motor HP/kW</td>
+                                    <td>0.5/0.37</td>
+                                    <td>1-0.75</td>
+                                    <td>1/0.75</td>
+                                    <td>2/1.5</td>
+                                    <td>3/2.25</td>
+                                </tr>
+                                <tr>
+                                    <td>Chopper Motor HP/kW</td>
+                                    <td>0.5/0.37</td>
+                                    <td>0.5/0.37</td>
+                                    <td>0.5/0.37</td>
+                                    <td>0.5/0.37</td>
+                                    <td>1/0.75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="BPV" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">BINDER PREPARATION VESSEL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            Mechwell Binder Preparation Vessel (Paste Preparation Kettle) has been designed uniquely for optimal mixing efficiency so as
+                            to ensure a homogeneous mix.The special in the vessel has been designed to create vortex inside the solvent which enhances
+                            the desired solubility of pharmaceutical binder solute into the various solvents.
+                            Due to its unique design the binder solution can be directly transferred into the processing equipment such as high shear mixer granulator,
+                            planetary mixers or fluid bed processor.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Optimal mixing efficiency to ensure a homogeneous mix.</li>
+                            <li>Easy handling.</li>
+                            <li>Easy maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="PASTE_KETTLE" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PASTE KETTLE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/pastekettle.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            The Tilting paste kettle is designed for preparation. It has a universal application resulting in uniform melting.
+                            This tank is designed to meet missing needs of wider range of products under varied operating conditions in chemicals, foods,
+                            cosmetics and pharmaceutical industry.
+                            The basic principle utilized in the design of this kettle is the jacket for passing steam in order to melt down the product to make paste.
+                            This kettle has a unique tilting arrangement for discharging the product.
+                            The Starch Paste Kettle confirms to CGMP norms and comprises of a jacketed hemispherical bowl with all necessary steam accessories.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Contact parts of SS 316/ SS 316L and bottom discharge with flush bottom ball valve.</li>
+                            <li>Mechanical tilting with worm / worm wheel arrangement.</li>
+                            <li>Motorized drive mechanism for tilting as an option.</li>
+                            <li>Detachable Agitator with Anchor blades and Teflon scrappers.</li>
+                            <li>Hydraulic lifting and lowering arrangement as an option.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="MULTIMILL" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MULTIMILL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/mill.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            <li>
+                                Multi mill machines are widely used for wet and dry granulation, pulverization etc.
+                                These machines find application in pharmaceutical, chemical, bulk drug, cosmetic, dyestuffs and food processing industries.
+                            </li>
+                            <li>
+                                Multi mill is used for high speed Granulating, Pulverizing, Mixing, Shredding, Chopping, etc, of a wide range of wet and dry
+                                materials without special attachments. This machine utilizes the principle of variable force swing hammer blades
+                                having both knife and impact edges rotating with a carefully selected screen to control size reduction.
+                            </li>
+                            <li>
+                                Flow path of material in vertical rotor machine is streamlined. During comminuting, material entering the chamber
+                                travels to the periphery and passes through the screen tangentially and racially avoiding chocking and temperature rise.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="FBD" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">FBD (FLUID BED DRYER)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            Fluidized bed dryer (also called fluid bed dryer) is a kind of equipment used extensively in the pharmaceutical
+                            industries to reduce the moisture content of pharmaceutical powder and granules.
+                            The equipment works on a principle of fluidization of the feed materials.
+                            In fluidization process, hot air is introduced at high pressure through a perforated bed of moist solid particulate.
+                            The wet solids are lifted from the bottom and suspended in a stream of air (fluidized state).
+                            Heat transfer is accomplished by direct contact between the wet solid and hot gases.
+                            The vaporized liquid is carried away by the drying gasses. Sometimes to save energy, the exit gas is partially recycled.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>High rates of moisture removal due to excellent gas-particle constant which results in high heat and mass transfer rates.</li>
+                            <li>High thermal efficiency is usually achieved if part of the thermal energy for drying is supplied by the internal heat exchanger.</li>
+                            <li>Lower capital and maintenance cost time.</li>
+                            <li>Reduced contact time for drying.</li>
+                            <li>Ease Of control.</li>
+                        </ul>
+                        <h5>Technical Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>FBD 3D</th>
+                                    <th>FBD 6D</th>
+                                    <th>FBD 12D</th>
+                                    <th>FBD 20D</th>
+                                    <th>FBD 25D</th>
+                                    <th>FBD 30D</th>
+                                    <th>FBD 50D</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Container Gross Volume (Ltr.)</td>
+                                    <td>100</td>
+                                    <td>200</td>
+                                    <td>400</td>
+                                    <td>670</td>
+                                    <td>800</td>
+                                    <td>1000</td>
+                                    <td>1650</td>
+                                </tr>
+                                <tr>
+                                    <td>Batch Capacity-Kgs.</td>
+                                    <td>30</td>
+                                    <td>60</td>
+                                    <td>120</td>
+                                    <td>200</td>
+                                    <td>250</td>
+                                    <td>300</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>Drying Temp in oC  </td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>50-85</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Electric Load in kW</td>
+                                    <td>18</td>
+                                    <td>36</td>
+                                    <td>54</td>
+                                    <td>-</td>
+                                    <td>103400</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Steam supply 3 kg/cm2 in Kcal/hr</td>
+                                    <td>12925</td>
+                                    <td>25850</td>
+                                    <td>51700</td>
+                                    <td>82720</td>
+                                    <td>6000</td>
+                                    <td>129250</td>
+                                    <td>196460</td>
+                                </tr>
+                                <tr>
+                                    <td>Blower Capacity m3/hr</td>
+                                    <td>2000</td>
+                                    <td>2500</td>
+                                    <td>3000</td>
+                                    <td>6000</td>
+                                    <td>25</td>
+                                    <td>12500</td>
+                                    <td>16500</td>
+                                </tr>
+                                <tr>
+                                    <td>Elec. Motor HP</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>20</td>
+                                    <td>30</td>
+                                    <td>-</td>
+                                    <td>30</td>
+                                    <td>40</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="MDP" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MULTICOLUMN DISTILLATION PLANT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            To Industries where 100% pure pyrogen-free water injection plays role, Multicolumn Distillation Plant is the perfect Multicolumn
+                            Distillation Plant Solution. Available in capacities ranging from 80-5000LPH, the Multicolumn Distillation Plant is used for its economy,
+                            low maintenance and low operation costs. Manufactured from high-grade raw material and have a capacity of 50 to 2500 ltrs.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Pure Sterile pyrogen free distilled water conforming to USP Standards.</li>
+                            <li>All contact parts are in SS316/SS316L.</li>
+                            <li>Electro polished crevice less inner contact surfaces.</li>
+                            <li>PLC based system form automated operation.</li>
+                            <li>Sanitary fittings for quick & easy preventive maintenance.</li>
+                            <li>Double tube sheet construction for the first column, where boiler steam is present.</li>
+                            <li>Synoptic panel board with facility for logging the data can also.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="VIBRO_SIFTER" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">VIBRO SIFTER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/vibro.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            It is very useful for pharmaceutical industries wherein gentle blending of dry granules of powder is to be done.
+                            <br />
+                            <li>
+                                Vibro Sifter is used for screening, sieving, grading for solid-liquid separation, process to separate the desired elements
+                                and the undesired elements from the combination of solid to solid (where two solids are generally having different properties)
+                                and solid to liquid material.
+                            </li>
+                            <li>
+                                It used in various industries such as pharmaceutical, chemicals, cosmetics, plastics, paints, minerals,
+                                rubber compounds, metal powders, detergents, pesticides and fertilizers, dyestutt and pigments.
+                            </li>
+                        </ul>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>The vibro sifters are self-contained, compact machines that make precise mechanical separation according to particle size through efficient use of vibration.</li>
+                            <li>Minimum blinding, longer screen life, no transmitted vibration and special design with multiple screens available for grinding.</li>
+                            <li>Easy cleaning & maintenance, contact part can be easily removed in seconds.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="COLLOID_MILL" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">COLLOID MILL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            A colloid mill is a machine that is used to reduce the particle size of a solid in suspension in a liquid,
+                            or to reduce the droplet size in emulsions. Colloid mills work on the rotor-stator
+                            principle: a rotor turns at high speeds (2000 - 18000 RPM).
+                            The resulting high levels of hydraulic shear applied to the process liquid disrupt structures in the fluid.
+                            Colloid mills are frequently used to increase the stability of suspensions and emulsions,
+                            but can also be used to reduce the particle size of solids in suspensions. Higher shear rates lead to smaller droplets,
+                            down to approximately 1 µm which are more resistant to emulsion separation.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>It has a wide range of use including commutation of slurry- materials.</li>
+                            <li>No pressure is required for ionization.</li>
+                            <li>The machine is simply constructed.</li>
+                            <li>It can be easily adjusted.</li>
+                            <li>Colloid mill is easy to can after use.</li>
+                            <li>The machine is self-draining.</li>
+                            <li>High capacity and minimal requirements.</li>
+                            <li>Reduced wear as a result of the construction of the rotor-stator with toughened steel/corundum.</li>
+                            <li>Low machine noise level.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="CCP" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CONVENTIONAL COATING PAN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/coating.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            The pan is slightly tilted to an angle about 45oC to the bench top.
+                            The standard coating pan has an electric motor that rotates the circular metal pan horizontally to its axis.
+                            It is the motion of this pan that causes a batch of tablets to tumble. Again the conventional pan system has inlet air supply.
+                        </p>
+                        <h5>Technical Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>12”</th>
+                                    <th>18”</th>
+                                    <th>24”</th>
+                                    <th>30”</th>
+                                    <th>36”</th>
+                                    <th>42”</th>
+                                    <th>48”</th>
+                                    <th>56”</th>
+                                    <th>72”</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Loading Capacity in Kg.</td>
+                                    <td>05</td>
+                                    <td>7 to 8</td>
+                                    <td>20 to 25</td>
+                                    <td>40 to 45</td>
+                                    <td>60 to 80</td>
+                                    <td>90 to 100</td>
+                                    <td>110 to 120</td>
+                                    <td>150 to 210</td>
+                                    <td>200 to 250</td>
+                                </tr>
+                                <tr>
+                                    <td>Motor HP</td>
+                                    <td>0.5</td>
+                                    <td>0.5</td>
+                                    <td>1.0</td>
+                                    <td>1.5</td>
+                                    <td>1.5</td>
+                                    <td>2.0</td>
+                                    <td>2.0</td>
+                                    <td>5.0</td>
+                                    <td>7.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Blower HP</td>
+                                    <td>0.25</td>
+                                    <td>0.25</td>
+                                    <td>0.5</td>
+                                    <td>0.5</td>
+                                    <td>1.0</td>
+                                    <td>1.0</td>
+                                    <td>1.0</td>
+                                    <td>2.0</td>
+                                    <td>2.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Blower fan Volume CFM</td>
+                                    <td>90</td>
+                                    <td>90</td>
+                                    <td>150</td>
+                                    <td>150</td>
+                                    <td>150</td>
+                                    <td>150</td>
+                                    <td>150</td>
+                                    <td>300</td>
+                                    <td>300</td>
+                                </tr>
+                                <tr>
+                                    <td>Heater Capacity in kW</td>
+                                    <td>1.0</td>
+                                    <td>1.0</td>
+                                    <td>3.0</td>
+                                    <td>3.0</td>
+                                    <td>3.0</td>
+                                    <td>3.0</td>
+                                    <td>3.0</td>
+                                    <td>5.0</td>
+                                    <td>5.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="RIBBON_BLENDER" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RIBBON BLENDER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/ribbon4.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            Ribbon Blenders are used for mixing dry powders or granules, coating particles with a minor ingredient,
+                            as well as for liquids and low-viscosity pastes.
+                            <br />
+                            <li>Common operation done on the Ribbon Blender is batching dry ingredient blends.</li>
+                            <li>Examples include baking mixes, tablet formulations, powdered flavors, protein supplements, chemical additives, etc. baking mixes, tablet formulations, powdered flavors, protein supplements, chemical additives, etc.</li>
+                        </ul>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Gentle treatment of the product.</li>
+                            <li>Wide range of products can be handled.</li>
+                            <li>Low maintenance design.</li>
+                            <li>Easy accessibility to all inside parts of mixer.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="OCTAGONAL_BLENDER" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">OCTAGONAL BLENDER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/ocb.jpg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/Pharm_fabrication/octagonal.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            It is very useful for pharmaceutical industries wherein gentle blending of dry granules of powder is to be done.
+
+                            <li>The important feature of the machine is easy to wash in place.</li>
+                            <li>Octagonal blender is supplied with a bin charging system or can be designed for vacuum charging. Dust free charging system is also incorporated, which is a completely closed system for charging and discharging of powders or granules.</li>
+                        </ul>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>The baffles are eliminated with blending profile analysis available.</li>
+                            <li>Pneumatically actuated valves for dust free transfers.</li>
+                            <li>Bins with Level sensory for automatic cut off.</li>
+                            <li>CGMP design for ease of cleaning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="DCB" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DOUBLE CONE BLENDER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/Pharm_fabrication/double1.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <ul class="p2">
+                            It is very useful for pharmaceutical industries wherein gentle blending of dry granules of powder is to be done.
+                            <li>DCB can be used for pharmaceutical, food, chemical, cosmetic products etc.</li>
+                            <li>The DCB is vertical cylinder with conical ends which rotates about a horizontal axis.</li>
+                            <li>The blender provides efficient mixing actions when loaded at 50% of its volume.</li>
+                            <li>When vertical head-room is at premium, DCB offers a solution.</li>
+                            <li>The effective volume for optimum homogeneity is between 35-70% of gross volume.</li>
+                        </ul>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>The conical shape at both ends enables uniform mixing and easy discharge.</li>
+                            <li>Powder is loaded into the cone through a wide opening and discharged through a butterfly or a slide valve.</li>
+                            <li>Depending upon the characteristic of the product, paddle type baffles can be provided on the shaft for better output.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="CB" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CONTA BLENDING</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            Conta Blending system has replaced completely the conventional blenders like ‘V’ shape / double cone or Ribbon type.
+                            It is a latest CGMP concept with an emphasis on the dust free transfer of powders and granules at different stages from
+                            sizing / dispensing to compression/ tiling of Tablets or Capsules.<br />
+                            Conta Blender has a flexibility of batch volume. Varying size of containers can be mounted on a drive console which
+                            is equipped which clamping cage. Batch size variation achievable in 500Kg.
+                            Model for example is from 75 Kg to 500Kg using two different sizes of containers.
+                            The mixing efficiency is better than the other type of tumbling blenders like Double Cone,
+                            'V' or Octa as they rotate in a diagonal and in a eccentric plane.
+                            It shuffles the product intimately resulting in homogeneous blend within 5- 20 min.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="VCB" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">V CONE BLENDER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            The V Cone blender with its V cone shaped bin ensures efficient blending suitable for specified user's requirement.
+                            The cone is statically balanced to avoid any excessive load on the gearbox and motor.
+                        </p>
+                        <h5>Salient Features</h5>
+                        <p class="p2">
+                            Conical shape enables uniform mixing and easy discharge.
+                        </p>
+                        <h5>Technical Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>TYPES</th>
+                                    <th>KVCB 50</th>
+                                    <th>KVCB 100</th>
+                                    <th>KVCB 300</th>
+                                    <th>KVCB 600</th>
+                                    <th>KVCB 1000</th>
+                                    <th>KVCB 1500</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Capacity (In Ltrs)</td>
+                                    <td>50</td>
+                                    <td>100</td>
+                                    <td>300</td>
+                                    <td>600</td>
+                                    <td>100</td>
+                                    <td>1500</td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="PM" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PLANETARY MIXER</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    @*<div class="product-content-img">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/Images/Logo/me_logo.png" style="-webkit-filter: blur(8px);" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="product-content-desc">
+                        <h5>Description</h5>
+                        <p class="p2">
+                            Planetary Mixer is used in various applications such as Ointments, Pharmaceutical Creams, Cosmetic Creams, Ceramics, Ink Pastes,
+                            Colour Pigments, Rubber, Compounds etc. Planetary Mixer is useful for thorough mixing of ointment, creams, lotions, toothpastes etc.
+                            in sterile or non-sterile conditions.
+                        </p>
+                        <h5>Features</h5>
+                        <ul class="p2">
+                            <li>Intimate and homogeneous mixing of products is employed by planetary motion of beaters and centrally located homogenizer.</li>
+                            <li>Product container provided with jacket to heat and cool for circulation of steam/ cold water. Mixer is also designed to operate under vacuum to remove air entrapment in product during mixing.</li>
+                            <li>High speed suitable tor homogenizing the product with independent drive at the center of top dish.</li>
+                            <li>Product bowl mounted on castor wheels for easy portability, washing & transporting mixed materials.</li>
+                            <li>Jacketed bowls available for heating cooling of products during mixing.</li>
+                            <li>Provision to mix materials under vacuum for de-aeration purpose.</li>
+                            <li>Double beaters open type to cover full cross section of products in bowl.</li>
+                            <li>For ointments / paste / cream/ lotions etc. are high speed emulsifier provided for homogeneous mixing and to produce lustrous product.</li>
+                            <li>Scrapper of suitable design to avoid localized heating or cooling & ensure uniform mixing.</li>
+                            <li>Flameproof construction optional.                 </li>
+                            <li>Motorized drive assembly for lifting and lowering.</li>
+                            <li>Needs comparatively smaller area for installation.</li>
+                            <li>Electrical control pane with back up fuses and indicator lamps for easy process control.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

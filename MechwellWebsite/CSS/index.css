@@ -1,0 +1,536 @@
+﻿body {
+}
+
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 430px;
+    /*object-fit: cover;*/
+}
+
+.demo {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    color: #f8f9fa;
+}
+
+.title {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 120px;
+    text-align: left;
+    font-family: serif;
+    color: #555;
+    font-size: 58px;
+    margin-left: 40px;
+}
+
+.who-we-are-description h2 {
+    margin: 10px 0;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.who-we-are-description p {
+    padding-right: 0px;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding-left: 45px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.who-we-are-description img {
+    height: 35px;
+    display: inline-block;
+}
+
+.who-we-are-img-section {
+    background-color: #062F4F;
+}
+
+.who-we-are-image {
+    /*width: 510px;
+    height: 300px;
+    margin: 10% auto;*/
+    padding-top: 164px;
+    text-align: center;
+}
+
+.tm-videobutton {
+    width: 553px;
+    height: 314px;
+}
+
+.who-we-are-image img {
+    width: 100%;
+    height: 110%;
+    border-radius: 0px;
+}
+
+.what-we-do {
+    background-color: black;
+}
+
+.what-we-do-description h2 {
+    margin: 20px 0;
+}
+
+.what-we-do-description p {
+    padding: 2% 7%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.what-we-do-description img {
+    height: 90px;
+    margin-bottom: -15px;
+    display: inline-block;
+}
+
+.what-we-do-img-section {
+    background-color: #ff5c5f;
+}
+
+.title1 {
+    margin-bottom: -15px;
+    margin-top: 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: serif;
+    font-size: 30px;
+}
+
+.what-we-do-image {
+    width: 80%;
+    height: 350px;
+    margin: 10% auto;
+}
+
+    .what-we-do-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+/*Product Services*/
+.product-services-section {
+    background-image: linear-gradient(#afafaf7d,#ffffff);
+}
+
+    .product-services-section h2 {
+        margin: 20px 0;
+    }
+
+    .product-services-section p {
+        padding: 1% 10%;
+    }
+
+.ps-card {
+    width: 80%;
+    background-image: url('../Images/Backgrounds/ps_card_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 10px 1px lightgrey;
+    margin: 5% auto 20% auto;
+    border-radius: 5px;
+}
+
+    .ps-card h4 {
+        font-size: 20pt;
+        font-weight: bold;
+        line-height: 250px;
+        color: #ffffff;
+    }
+
+.btnpsview {
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    bottom: 30px;
+    position: relative;
+    background-color: transparent;
+}
+
+.btnPS1 {
+    border: 2px solid #FF3B3F !important;
+    color: #FF3B3F !important;
+}
+
+    .btnPS1:hover {
+    }
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 254px;
+    margin-left: 30px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-front {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #bbb;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
+    color: black;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+    .flip-card-front .product-title {
+        text-align: left;
+        padding-left: 3%;
+        font-size: 14pt;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Century Gothic';
+        font-weight: bold;
+        line-height: 24pt;
+    }
+
+.product-title-blue {
+    background-color: rgba(6, 47, 79, 0.85);
+}
+
+.product-title-red {
+    background-color: rgba(201, 14, 10, 0.75);
+}
+
+.enquiry-section {
+    /*background-image:linear-gradient(#286DA8,#CAEBF2);*/
+    /*background-color:#b39129;*/
+    background-color: #286DA8;
+}
+
+    .enquiry-section .query {
+        width: 70%;
+        border: 3px solid #ffffff;
+        margin: 25% auto;
+        padding: 15%;
+    }
+
+        .enquiry-section .query h4 {
+            text-align: center;
+            font-size: 30pt;
+            color: #ffffff;
+        }
+
+    .enquiry-section .form-section {
+        width: 90%;
+        height: 96%;
+        background-color: #ffffff;
+        margin: 2% auto;
+        border-radius: 5px;
+    }
+
+        .enquiry-section .form-section .form {
+            width: 90%;
+            margin: auto;
+        }
+
+            .enquiry-section .form-section .form img {
+                width: 50%;
+                margin: auto;
+                display: block;
+                padding: 8%;
+            }
+
+            .enquiry-section .form-section .form button {
+                width: 50%;
+                display: block;
+                margin: auto;
+            }
+
+.btna {
+    border: none;
+    /*color: white;*/
+    padding: 3px 9px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-top: -2px;
+}
+
+.column {
+    /*margin: 15px 15px 0;*/
+    padding: 0;
+}
+
+    .column::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    .column div:first-child {
+        margin-left: 0;
+    }
+
+figure {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+    figure:hover + span {
+        bottom: -36px;
+        opacity: 1;
+    }
+
+@media screen and (max-width: 480px) {
+    .carousel-inner img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .demo {
+        font-size: 32px;
+    }
+
+    .title {
+        padding-left: 18px;
+        font-size: 25px !important;
+        font-weight: 100;
+        line-height: 90px;
+        margin-left: 0px;
+    }
+
+    .who-we-are-description h2 {
+        margin: 0px 0;
+    }
+
+    .who-we-are-description p {
+        padding-right: 40px;
+        padding-left: 0;
+        font-size: 14px !important;
+        margin-bottom: -15px;
+    }
+
+    .who-we-are-image {
+        padding-top: 10px;
+        /*width: 510px;*/
+        height: 197px;
+    }
+
+    .tm-videobutton {
+        width: 277px;
+        height: 159px;
+    }
+
+    .who-we-are-image img {
+        height: 70%;
+    }
+
+    .what-we-do-description p {
+        margin-bottom: -5px;
+    }
+
+    .what-we-do-description img {
+        height: 70px;
+    }
+
+    .title1 {
+        font-size: 25px !important;
+    }
+
+    .flip-card-inner {
+        height: 70%;
+        width: 75%;
+    }
+
+    .flip-card-front .product-title {
+        font-size: 10pt;
+        line-height: 30pt;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .carousel-inner img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .demo {
+        font-size: 32px;
+    }
+
+    .title {
+        padding-left: 18px;
+        font-size: 25px !important;
+        font-weight: 100;
+        line-height: 90px;
+        margin-left: 0px;
+    }
+
+    .who-we-are-description h2 {
+        margin: 0px 0;
+    }
+
+    .who-we-are-description p {
+        padding-left: 40px;
+        font-size: 14px !important;
+        margin-bottom: -15px;
+    }
+
+    .who-we-are-image {
+        padding-top: 10px;
+        /*width: 510px;*/
+        height: 197px;
+    }
+
+    .tm-videobutton {
+        width: 277px;
+        height: 159px;
+    }
+
+    .who-we-are-image img {
+        height: 70%;
+    }
+
+    .what-we-do-description p {
+        margin-bottom: -5px;
+    }
+
+    .what-we-do-description img {
+        height: 70px;
+    }
+
+    .title1 {
+        font-size: 25px !important;
+    }
+
+    .flip-card-inner {
+        height: 70%;
+        width: 75%;
+    }
+
+    .flip-card-front .product-title {
+        font-size: 10pt;
+        line-height: 30pt;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .carousel-inner img {
+        width: 100%;
+        height: 412px;
+        object-fit: fill;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 100%;
+        margin-left: 75px;
+        height: 450px;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .demo {
+        font-size: 32px;
+    }
+
+    .title {
+        padding-left: 18px;
+        font-size: 45px !important;
+        font-weight: 100;
+        line-height: 95px;
+        margin-left: 0px;
+    }
+
+    .who-we-are-description h2 {
+        margin: 0px 0;
+    }
+
+    .who-we-are-description p {
+        padding-left: 40px;
+        font-size: 16px !important;
+        margin-bottom: -15px;
+    }
+
+    .who-we-are-image {
+        padding-top: 10px;
+        /*width: 510px;*/
+        height: 360px;
+    }
+
+    .tm-videobutton {
+        width: 553px;
+        height: 314px;
+    }
+
+    .who-we-are-image img {
+        height: 70%;
+    }
+
+    .what-we-do-description p {
+        margin-bottom: -5px;
+    }
+
+    .what-we-do-description img {
+        height: 70px;
+    }
+
+    .title1 {
+        font-size: 25px !important;
+    }
+
+    .flip-card-inner {
+        height: 70%;
+        width: 75%;
+    }
+
+    .flip-card-front .product-title {
+        font-size: 16pt;
+        line-height: 45pt;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1500px) {
+}

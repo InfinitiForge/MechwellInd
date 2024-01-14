@@ -1,0 +1,1337 @@
+﻿
+@{
+    ViewBag.Title = "VFFS_Packaging_Machine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/CSS/navbar.css" rel="stylesheet" />
+<link href="~/CSS/products.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+    function myFunction() {
+        document.getElementById("items").addEventListener("touchstart", startTouch);
+        document.getElementById("items").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                $("#items").carousel("next");
+
+            } else {
+                $("#items").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 87px;">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" id="items" ontouchmove="myFunction()">
+        <div class="carousel-item active">
+            <img src="~/Images/VFFS_Packaging_Machine/1.jpeg" />
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/VFFS_Packaging_Machine/2.jpeg" />
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!---------------------------End-Slider------------------------------->
+<div class="marine-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="title" style="margin-left: 15px;">VFFS Packaging Machine</h2>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-6">
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal5">
+                <b>MW-10 (SINGLE TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Mechanical<br />
+                0.3gms to 60 gms<br />
+                3 side seal/4 side seal pouch
+            </button>
+            <br />
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal1">
+                <b>MW-125 (SINGLE TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Pneumatic<br />
+                5 gms to 250 gms<br />
+                3 side seal pillow pouch (Centre seal)/ Gusset pouch
+            </button>
+            <br />
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal3">
+                <b>MWS-300 (SINGLE TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Pneumatic<br />
+                100 gms to 2000gms<br />
+                3 side seal pillow pouch (Centre seal)/ Gusset pouch
+            </button>
+            <br />
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal4">
+                <b>MWH-300 (SINGLE TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Pneumatic<br />
+                500 gms to 5000gms<br />
+                3 side seal pillow pouch (Centre seal)/ Gusset pouch
+            </button>
+            <br />
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal">
+                <b> DYNAMIC MW-140 (CONTINUOUS MOTION-SINGLE TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Pneumatic<br />
+                30 gm to 2200 gm<br />
+                3 side seal pillow pouch (Centre seal)/ Gusset pouch
+            </button>
+            <br />
+            <button class="btna info" data-toggle="modal" data-target="#ProductModal2">
+                <b>SPEEDO MW-007 (MULTI-TRACK)</b><br />
+                <hr class="hr" />
+                Fully Automatic - Pneumatic<br />
+                1 gm up to 25gms / L: 1 ml up to 110 ml<br />
+                4 side seal pouch
+            </button>
+        </div>
+        <div class="col-lg-6">
+            <div class="adjust" id="slider">
+                <div id="demo1" class="carousel slide" data-ride="carousel" data-options="orientation: vertical;">
+                    <div class="carousel-inner" id="items1"ontouchmove="myFunction1()">
+                        <div class="carousel-item active">
+                            <img src="../Images/VFFS_Packaging_Machine/13.jpg" style="object-fit: contain;" />
+                            <img src="../Images/VFFS_Packaging_Machine/16.png" style="object-fit: contain;" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/17.jpg" style="object-fit: contain;" />
+                            <img src="../Images/VFFS_Packaging_Machine/3.jpg" style="object-fit: contain;" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/5.jpg" style="object-fit: contain;" />
+                            <img src="../Images/VFFS_Packaging_Machine/4.jpg" style="object-fit: contain;" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/6.jpg" style="object-fit: contain;" />
+                            <img src="../Images/VFFS_Packaging_Machine/7.jpg" style="object-fit: contain;" />
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/8.jpg" style="object-fit: contain;" />
+                            <img src="../Images/VFFS_Packaging_Machine/9.jpg" style="object-fit: contain;" />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true" style="color: black;"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#demo1" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true" style="color: black;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-6">
+
+        </div>
+        <div class="col-lg-6">
+            <div class="adjust" id="slider2">
+                <div id="demo2" class="carousel slide" data-ride="carousel" data-options="orientation: vertical;">
+                    <div class="carousel-inner" id="items2"ontouchmove="myFunction2()">
+                        <div class="carousel-item active">
+                            <img src="../Images/VFFS_Packaging_Machine/13.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/16.png" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/17.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/3.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/5.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/4.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/6.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/7.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/8.jpg" style="object-fit: contain;" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/VFFS_Packaging_Machine/9.jpg" style="object-fit: contain;" />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                        <i class="fa fa-chevron-left" aria-hidden="true" style="color: black;"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#demo2" data-slide="next">
+                        <i class="fa fa-chevron-right" aria-hidden="true" style="color: black;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Modal -->
+<div id="ProductModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DYNAMIC MW-140</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>Filler Information</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Auger Filler</td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cup Filler</td>
+                                    <td>
+                                        Powders (Free flowing), Granules, Pulses, Beans,
+                                        Detergents, Tea, Coffee Seeds, Sugar, Rice, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Multi-Head Filler</td>
+                                    <td>
+                                        Rice, Pulses, Tea, Coffee beans, Candies/Toffees,
+                                        Tablets, Cashews, Potato / Banana wafers, Snack
+                                        foods, Fresh & frozen foods, Dried fruits, Pasta
+                                        pieces, Hardware items, Whole Spices, Sugar,
+                                        etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>DYNAMIC MW-140 (CONTINUOUS MOTION)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Packaging Range</td>
+                                    <td>30 gm to 2200 gm</td>
+                                </tr>
+                                <tr>
+                                    <td>Filling System</td>
+                                    <td>Multihead, Auger Filler,Cup Filler</td>
+                                </tr>
+                                <tr>
+                                    <td>Type Of Sealing</td>
+                                    <td>Vertical plain horizontal 2mm line sealing</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack Size</td>
+                                    <td>W :  55 mm to 300 mm<br />L  :  100 mm to 320mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Speed</td>
+                                    <td>Up to 110- 130 PPM</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Input</td>
+                                    <td>3 phase 415 V AC, 50 Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Compressed Air</td>
+                                    <td>5.0 kg/cm2g</td>
+                                </tr>
+                                <tr>
+                                    <td>Packing Material</td>
+                                    <td>LLDPE, LDPE</td>
+                                </tr>
+                                <tr>
+                                    <td>Optional</td>
+                                    <td>
+                                        Take off conveyor
+                                        Perforator between sachets
+                                        Overprinting attachment
+                                        Gas flushing and Infeed Product Elevator system
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ProductModal1" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MW-125</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>
+                            Filler Information
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Auger Filler</td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cup Filler</td>
+                                    <td>
+                                        Powders (Free flowing), Granules, Pulses, Beans,
+                                        Detergents, Tea, Coffee Seeds, Sugar, Rice, etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>Specifications</h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>MW-125</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Packaging Range
+                                    </td>
+                                    <td>
+                                        5 gms to 250 gms
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Filling System
+                                    </td>
+                                    <td>
+                                        Auger Filler,Cup Filler
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type Of Sealing
+                                    </td>
+                                    <td>
+                                        Vertical plain horizontal 2mm line sealing
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pack Size
+                                    </td>
+                                    <td>
+                                        W :  50mm to 170 mm<br />
+                                        L  :  100 mm to 230mm
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Speed
+                                    </td>
+                                    <td>
+                                        Up to 65 PPM (Depends on pouch size &grammage)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Power Input
+                                    </td>
+                                    <td>
+                                        3 phase 415 V AC, 50 Hz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cimpressed Air
+                                    </td>
+                                    <td>
+                                        5.0 kg/cm2g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Packing Material
+                                    </td>
+                                    <td>
+                                        LLDPE, LDPE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Optional
+                                    </td>
+                                    <td>
+                                        Take off conveyor
+                                        Perforator between sachets
+                                        Overprinting attachment
+                                        Gas flushing and Infeed Product Elevator system
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ProductModal2" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">SPEEDO MW-007</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>
+                            Filler Information
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Auger Filler
+                                    </td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Slide Filler
+                                    </td>
+                                    <td>
+
+                                        Free flowing Pharmaceutical Powders, Isabgol powder,ORS powder, Granules, Sugar, Salt, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Liquid Filler
+                                    </td>
+                                    <td>
+                                        Shampoo, Cough Syrup, Coconut Oil, Liquid
+                                        Detergent, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Viscous Filler
+                                    </td>
+                                    <td>
+                                        Ketch Up, Cosmetic Creams, Homogeneous
+                                        paste, Pickle paste, Chutney paste, etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>
+                            Specifications
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>SPEEDO MW-007 (MULTI TRACKS)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Packaging Range
+                                    </td>
+                                    <td>
+                                        1 gm up to 25gms
+                                        L: 1 ml up to 110 ml
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        No. Of Tracks
+                                    </td>
+                                    <td>
+                                        2T,4T,6T,8T,10T
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Filling System
+                                    </td>
+                                    <td>
+                                        Auger Filler, Slide Filler, Liquid Filler, Viscous Paste Filler
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type Of Sealing
+                                    </td>
+                                    <td>
+                                        Square knurling 0.8 mm pitch,
+                                        Diamond knurling 0.8 mm pitch,
+                                        Line sealing 1.5 mm pitch
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pack Size
+                                    </td>
+                                    <td>
+                                        W :  35mm to 95 mm<br />
+                                        L  :  55 mm to 155mm
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Speed
+                                    </td>
+                                    <td>
+                                        Up to 100 PPM
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Power Input
+                                    </td>
+                                    <td>
+                                        3 phase 415 V AC, 50 Hz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Compressed Air
+                                    </td>
+                                    <td>
+                                        6.0 kg/cm2g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Packing Material
+                                    </td>
+                                    <td>
+                                        LLDPE, LDPE, Paper Laminate
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Optional
+                                    </td>
+                                    <td>
+                                        Take off conveyor
+                                        Tear - cut device
+                                        Emboss Coding
+                                        Perforator between sachets/ Shear Cutting(Plain)
+                                        Overprinting attachment
+                                        Gas flushing and Infeed Product Elevator system
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ProductModal3" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MWS-300</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>
+                            Filler Information
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Auger Filler
+                                    </td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cup Filler
+                                    </td>
+                                    <td>
+                                        Powders (Free flowing), Granules, Pulses, Beans,
+                                        Detergents, Tea, Coffee Seeds, Sugar, Rice, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Multi-Head Filler
+                                    </td>
+                                    <td>
+                                        Rice, Pulses, Tea, Coffee beans, Candies/Toffees,
+                                        Tablets, Cashews, Potato / Banana wafers, Snack
+                                        foods, Fresh & frozen foods, Dried fruits, Pasta
+                                        pieces, Hardware items, Whole Spices, Sugar,
+                                        etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Viscous Filler
+                                    </td>
+                                    <td>
+                                        Ketch Up, Cosmetic Creams, Homogeneous
+                                        paste, Pickle paste, Chutney paste, etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>
+                            Specifications
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>MWS-300</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Packaging Range
+                                    </td>
+                                    <td>
+                                        100 gms to 2000gms
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Filling System
+                                    </td>
+                                    <td>
+                                        Multi Head,Cup Filler, Auger Filler servo driven, Viscous Paste Filler
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type Of Sealing
+                                    </td>
+                                    <td>
+                                        Vertical plain horizontal 2mm line sealing
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pack Size
+                                    </td>
+                                    <td>
+                                        W :  35 mm to 150 mm<br />
+                                        L  :  75 mm to 220 mm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Speed
+                                    </td>
+                                    <td>
+                                        Up to 65 PPM (Depends on pouch size &grammage)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Power Input
+                                    </td>
+                                    <td>
+                                        3 phase 415 V AC, 50 Hz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Compressed Air
+                                    </td>
+                                    <td>
+                                        5.0 kg/cm2g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Packing Material
+                                    </td>
+                                    <td>
+                                        LLDPE, LDPE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Optional
+                                    </td>
+                                    <td>
+                                        Take off conveyor
+                                        Perforator between sachets
+                                        Overprinting attachment
+                                        Gas flushing and Infeed Product Elevator system
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ProductModal4" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">MWH-300</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>
+                            Filler Information
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Auger Filler
+                                    </td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cup Filler
+                                    </td>
+                                    <td>
+                                        Powders (Free flowing), Granules, Pulses, Beans,
+                                        Detergents, Tea, Coffee Seeds, Sugar, Rice, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Multi-Head Filler
+                                    </td>
+                                    <td>
+                                        Rice, Pulses, Tea, Coffee beans, Candies/Toffees,
+                                        Tablets, Cashews, Potato / Banana wafers, Snack
+                                        foods, Fresh & frozen foods, Dried fruits, Pasta
+                                        pieces, Hardware items, Whole Spices, Sugar,
+                                        etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Viscous Filler
+                                    </td>
+                                    <td>
+                                        Ketch Up, Cosmetic Creams, Homogeneous
+                                        paste, Pickle paste, Chutney paste, etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>
+                            Specifications
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>MWH-300</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Packaging Range
+                                    </td>
+                                    <td>
+                                        500 gms to 5000gms
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Filling System
+                                    </td>
+                                    <td>
+                                        Multi Head,Cup Filler, Auger Filler servo driven, Viscous Paste Filler
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type Of Sealing
+                                    </td>
+                                    <td>
+                                        Vertical plain horizontal 2mm line sealing
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pack Size
+                                    </td>
+                                    <td>
+                                        W :  100 mm to 300 mm<br />
+                                        L  :  100 mm to 350mm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Speed
+                                    </td>
+                                    <td>
+                                        Up to 45 PPM (Depends on pouch size &grammage)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Power Input
+                                    </td>
+                                    <td>
+                                        3 phase 415 V AC, 50 Hz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Compressed Air
+                                    </td>
+                                    <td>
+                                        6.0 kg/cm2g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Packing Material
+                                    </td>
+                                    <td>
+                                        LLDPE, LDPE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Optional
+                                    </td>
+                                    <td>
+                                        Take off conveyor
+                                        Perforator between sachets
+                                        Overprinting attachment
+                                        Gas flushing and Infeed Product Elevator system
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ProductModal5" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">BASIC MW-10</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-content">
+                    <div class="product-content-img">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="~/Images/VFFS_Packaging_Machine/11.jpeg" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="~/Images/VFFS_Packaging_Machine/21.jpeg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-desc">
+                        <h5>
+                            Filler Information
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Filler Type </th>
+                                    <th>Material to be pack</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Auger Filler
+                                    </td>
+                                    <td>
+                                        Non-free flowing Pharmaceutical & agricultural
+                                        powder, All spices Powder, Milk powder,
+                                        Chocolate powder, Coffee Powder, Pesticide
+                                        powders, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cup Filler
+                                    </td>
+                                    <td>
+                                        Powders (Free flowing), Granules, Pulses, Beans,
+                                        Detergents, Tea, Coffee Seeds, Sugar, Rice, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Liquid Filler
+                                    </td>
+                                    <td>
+                                        Shampoo, Cough Syrup, Coconut Oil, Liquid
+                                        Detergent, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Viscous Filler
+                                    </td>
+                                    <td>
+                                        Ketch Up, Cosmetic Creams, Homogeneous
+                                        paste, Pickle paste, Chutney paste, etc.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>
+                            Specifications
+                        </h5>
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MODEL</th>
+                                    <th>MW-10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Packaging Range
+                                    </td>
+                                    <td>
+                                        0.3gms to 60 gms
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Filling System
+                                    </td>
+                                    <td>
+                                        Auger Filler,Cup Filler, Liquid Filler, Viscous Paste Filler
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type Of Sealing
+                                    </td>
+                                    <td>
+                                        3 side/ 4 side seal pouch
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pack Size
+                                    </td>
+                                    <td>
+                                        W :  28mm to 110 mm<br />
+                                        L  :  55 mm to 155mm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Speed
+                                    </td>
+                                    <td>
+                                        15 to 85 PPM
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Power Input
+                                    </td>
+                                    <td>
+                                        3 phase 415 V AC, 50 Hz
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Packing Material
+                                    </td>
+                                    <td>
+                                        LLDPE, LDPE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Optional
+                                    </td>
+                                    <td>
+                                        Perforator between sachets
+                                        Overprinting attachment
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function myFunction1() {
+        document.getElementById("items1").addEventListener("touchstart", startTouch);
+        document.getElementById("items1").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                $("#items1").carousel("next");
+
+            } else {
+                $("#items1").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+<script>
+    function myFunction2() {
+        document.getElementById("items2").addEventListener("touchstart", startTouch);
+        document.getElementById("items2").addEventListener("touchmove", moveTouch);
+    }
+
+    var initialX = null;
+    var initialY = null;
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    };
+
+    function moveTouch(e) {
+
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        var currentX = e.touches[0].clientX;
+        var currentY = e.touches[0].clientY;
+
+        var diffX = initialX - currentX;
+        var diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                $("#items2").carousel("next");
+
+            } else {
+                $("#items2").carousel("prev");
+
+            }
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    };
+
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,750 @@
+﻿.carousel-inner img {
+    width: 100%;
+    height: 420px;
+    /*object-fit: cover;*/
+}
+
+.adjust {
+}
+
+.hr {
+    border-top: 1px solid red;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 338px;
+}
+
+.hr1 {
+    border-top: 1px solid red;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 200px;
+}
+
+.btna {
+    border: none;
+    color: white;
+    padding: 3px 9px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #004571;
+    margin-bottom: 30px;
+    margin-top: -2px;
+    width: 100%;
+    height: 120px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 #888888, 0 6px 20px 0 #888888;
+}
+
+.btna1 {
+    border: none;
+    color: white;
+    padding: 3px 9px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #004571;
+    margin-bottom: 30px;
+    margin-top: -2px;
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 #888888, 0 6px 20px 0 #888888;
+}
+
+.btna2 {
+    border: black;
+    color: white;
+    padding: 3px 9px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #004571;
+    margin-bottom: 30px;
+    margin-top: -2px;
+    width: 335px;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 #888888, 0 6px 20px 0 #888888;
+}
+
+.marine-wrapper {
+    width: 80%;
+    margin: 0% auto;
+}
+
+.product-wrapper {
+    background-color: rgba(228, 228, 228, 0.70);
+    background-image: url('../Images/Backgrounds/ps_card_bg.jpg');
+    width: 96%;
+    height: 350px;
+    margin: 2% auto;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.title {
+    margin-bottom: 0;
+    margin-top: 0;
+    /*margin-left: 114px;*/
+    line-height: 120px;
+    text-align: left;
+    font-family: serif;
+    color: #004571;
+    font-size: 58px;
+}
+
+.title1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    /*margin-left: 114px;*/
+    line-height: 120px;
+    text-align: left;
+    font-family: serif;
+    color: #004571;
+    font-size: 58px;
+}
+
+.title2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 80px;
+    text-align: center;
+    font-family: serif;
+    color: #c3080f;
+    font-size: 30px;
+}
+
+.p1 {
+    text-align: left;
+    font-family: serif;
+    color: #555;
+    /*width: 80%;*/
+    margin-top: 10px;
+    /*margin-left: 119px;*/
+}
+
+.p2 {
+    margin: 5px;
+    border: 1px solid black;
+    outline-offset: 10px;
+    text-align: left !important;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 96%;
+    height: 350px;
+    margin: 2% auto;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(0deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #bbb;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
+    color: black;
+    z-index: 2;
+}
+
+    .flip-card-front .product-title {
+        text-align: left;
+        padding-left: 5%;
+        font-size: 20pt;
+        color: #fff;
+        /*background-color: rgba(60, 60, 60, 0.70);*/
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Century Gothic';
+        font-weight: bold;
+        line-height: 60pt;
+    }
+
+.product-title-blue {
+    background-color: rgba(6, 47, 79, 0.85);
+}
+
+.product-title-red {
+    background-color: rgba(201, 14, 10, 0.75);
+}
+
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.flip-card-back-blue {
+    background-color: #062F4F;
+}
+
+.flip-card-back-red {
+    background-color: #ba1414;
+}
+
+.flip-card-back img {
+    width: 20%;
+    display: inline-block;
+    margin: 25% auto;
+    vertical-align: middle;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+    .flip-card-back img:hover {
+        transform: scale(1.5);
+    }
+
+.product-content {
+    width: 100%;
+}
+
+.product-content-img {
+    width: 98%;
+    margin: 10px auto;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+    .product-content-img img {
+        width: 60%;
+        display: block;
+        margin: 10px auto;
+    }
+
+.product-content-desc h5 {
+    text-align: center;
+    font-family: 'Century Gothic';
+    color: rgba(6, 47, 79, 0.85);
+    font-size: 30pt;
+}
+
+.product-content-desc p {
+    padding: 10px 20px;
+    font-family: 'Century Gothic';
+    text-align: justify;
+}
+
+.product-content-desc table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product-content-desc th {
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-content-desc td {
+    width: 50%;
+    padding: 15px;
+    text-align: left;
+}
+
+.product-desc h5 {
+    text-align: center;
+    font-family: 'Century Gothic';
+    color: rgba(6, 47, 79, 0.85);
+    font-size: 30pt;
+}
+
+.product-desc p {
+    padding: 10px 20px;
+    font-family: 'Century Gothic';
+    text-align: justify;
+}
+
+.product-desc table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product-desc th {
+    /*width: 50%;*/
+    padding: 15px;
+    text-align: center;
+}
+
+.product-desc td {
+    /*width: 50%;*/
+    padding: 15px;
+    text-align: left;
+}
+
+.product-desc1 h5 {
+    text-align: center;
+    font-family: 'Century Gothic';
+    color: rgba(6, 47, 79, 0.85);
+    font-size: 30pt;
+}
+
+.product-desc1 p {
+    padding: 10px 20px;
+    font-family: 'Century Gothic';
+    text-align: justify;
+}
+
+.product-desc1 table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product-desc1 th {
+    /*width: 50%;*/
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.product-desc1 td {
+    /*width: 50%;*/
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.modal-title {
+    font-family: 'Century Gothic';
+    color: rgba(6, 47, 79, 0.85);
+    font-size: 25pt;
+}
+
+@media screen and (max-width: 480px) {
+    #slider {
+        display: none;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .adjust {
+        margin-top: 10px;
+    }
+
+    .hr {
+        width: 150px;
+    }
+
+    .hr1 {
+        width: 150px;
+    }
+
+    .btna {
+        font-size: 13px;
+        margin-bottom: 20px;
+        /*width: 275px;*/
+        height: auto;
+    }
+
+    .btna1 {
+        font-size: 13px;
+        margin-bottom: 20px;
+        /*width: 275px;*/
+        height: 70px;
+        text-align: center;
+    }
+
+    .btna2 {
+        font-size: 13px;
+        margin-bottom: 20px;
+        width: 275px;
+        height: 70px;
+        text-align: center;
+    }
+
+    .title {
+        /*padding-left: 18px;*/
+        font-size: 25px !important;
+        font-weight: 100;
+        line-height: 65px;
+        /*margin-left: 50px;*/
+    }
+
+    .title1 {
+        /*padding-left: 18px;*/
+        font-size: 22px !important;
+        font-weight: 100;
+        line-height: 65px;
+        /*margin-left: 50px;*/
+    }
+
+    .title2 {
+        font-size: 22px !important;
+        font-weight: 100;
+        line-height: 55px;
+    }
+
+    .p1 {
+        /*padding-left: 18px;*/
+        font-size: 16px !important;
+        text-align: justify;
+        width: 90%;
+        /*margin-left: 30px;*/
+    }
+
+    .flip-card {
+        margin-bottom: -125px;
+    }
+
+    .flip-card-inner {
+        height: 57% !important;
+    }
+
+    .flip-card-front {
+        background-size: cover;
+    }
+
+        .flip-card-front .product-title {
+            font-size: 13pt;
+            line-height: 30pt;
+            background-size: contain;
+        }
+
+    .product-content-desc h5 {
+        font-size: 20pt;
+    }
+
+    .product-content-desc th, .product-content-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    .product-desc h5 {
+        font-size: 17pt;
+    }
+
+    .product-desc th, .product-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .product-desc1 h5 {
+        font-size: 19pt;
+    }
+
+    .product-desc1 th, .product-desc1 td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .modal-title {
+        font-family: 'Century Gothic';
+        color: rgba(6, 47, 79, 0.85);
+        font-size: 15pt;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    #slider {
+        display: none;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 215px;
+        object-fit: cover;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .adjust {
+        margin-top: 12px;
+    }
+
+    .hr {
+        width: 155px;
+    }
+
+    .hr1 {
+        width: 155px;
+    }
+
+    .btna {
+        font-size: 14px;
+        margin-bottom: 22px;
+        /*width: 275px;*/
+        height: auto;
+    }
+
+    .btna1 {
+        font-size: 14px;
+        margin-bottom: 22px;
+        /*width: 275px;*/
+        height: 72px;
+        text-align: center;
+    }
+
+    .btna2 {
+        font-size: 14px;
+        margin-bottom: 22px;
+        width: 280px;
+        height: 72px;
+        text-align: center;
+    }
+
+    .title {
+        /*padding-left: 18px;*/
+        font-size: 25px !important;
+        font-weight: 100;
+        line-height: 65px;
+        /*margin-left: 50px;*/
+    }
+
+    .title1 {
+        /*padding-left: 18px;*/
+        font-size: 22px !important;
+        font-weight: 100;
+        line-height: 65px;
+        /*margin-left: 50px;*/
+    }
+
+    .title2 {
+        font-size: 22px !important;
+        font-weight: 100;
+        line-height: 55px;
+    }
+
+    .p1 {
+        /*padding-left: 18px;*/
+        font-size: 16px !important;
+        width: 90%;
+        /*margin-left: 30px;*/
+    }
+
+    .flip-card {
+        margin-bottom: -125px;
+    }
+
+    .flip-card-inner {
+        height: 57% !important;
+    }
+
+    .flip-card-front {
+        background-size: contain;
+    }
+
+        .flip-card-front .product-title {
+            font-size: 13pt;
+            line-height: 30pt;
+            background-size: contain;
+        }
+
+    .product-content-desc h5 {
+        font-size: 20pt;
+    }
+
+    .product-content-desc th, .product-content-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    .product-desc h5 {
+        font-size: 19pt;
+    }
+
+    .product-desc th, .product-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .product-desc1 h5 {
+        font-size: 19pt;
+    }
+
+    .product-desc1 th, .product-desc1 td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .modal-title {
+        font-family: 'Century Gothic';
+        color: rgba(6, 47, 79, 0.85);
+        font-size: 15pt;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #slider {
+        display: none;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 390px;
+        object-fit: fill;
+    }
+
+    .carousel-indicators li {
+        visibility: hidden;
+    }
+
+    .adjust {
+        margin-top: 10px;
+    }
+
+    .hr {
+        width: 150px;
+    }
+
+    .hr1 {
+        width: 150px;
+    }
+
+    .btna {
+        font-size: 16px;
+        margin-bottom: 20px;
+        /*width: 275px;*/
+        height: auto;
+    }
+
+    .btna1 {
+        font-size: 16px;
+        margin-bottom: 25px;
+        /*width: 275px;*/
+        height: 95px;
+        text-align: center;
+    }
+
+    .btna2 {
+        font-size: 13px;
+        margin-bottom: 20px;
+        width: 275px;
+        height: 70px;
+        text-align: center;
+    }
+
+    .title {
+        /*padding-left: 18px;*/
+        font-size: 45px !important;
+        font-weight: 100;
+        line-height: 90px;
+        /*margin-left: 50px;*/
+    }
+
+    .title1 {
+        /*padding-left: 18px;*/
+        font-size: 45px !important;
+        font-weight: 100;
+        line-height: 90px;
+        /*margin-left: 50px;*/
+    }
+
+    .title2 {
+        font-size: 35px !important;
+        font-weight: 100;
+        line-height: 65px;
+    }
+
+    .p1 {
+        /*padding-left: 18px;*/
+        font-size: 19px !important;
+        /*width: 90%;*/
+        /*margin-left: 30px;*/
+    }
+
+    .flip-card {
+        /*margin-bottom: -125px;*/
+    }
+
+    .flip-card-inner {
+        height: 90% !important;
+    }
+
+    .flip-card-front {
+        background-size: cover;
+    }
+
+        .flip-card-front .product-title {
+            font-size: 22pt;
+            line-height: 40pt;
+            background-size: contain;
+        }
+
+    .product-content-desc h5 {
+        font-size: 19pt;
+    }
+
+    .product-content-desc th, .product-content-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    .product-desc h5 {
+        font-size: 24pt;
+    }
+
+    .product-desc th, .product-desc td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .product-desc1 h5 {
+        font-size: 19pt;
+    }
+
+    .product-desc1 th, .product-desc1 td {
+        /* width: 50%; */
+        padding: 3px;
+        font-size: 11px;
+    }
+
+    .modal-title {
+        font-family: 'Century Gothic';
+        color: rgba(6, 47, 79, 0.85);
+        font-size: 19pt;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1500px) {
+    #slider2 {
+        display: none;
+    }
+}

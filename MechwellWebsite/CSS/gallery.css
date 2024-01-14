@@ -1,0 +1,30 @@
+﻿.gallery {
+    background-image: url('../Images/Others/background.jpg');
+    margin: 30px 15px;
+}
+
+    .gallery h1 {
+        line-height: 200px;
+        color: rgba(121, 255, 255, 0.80);
+        margin-top: 87px;
+    }
+@media screen and (max-width: 500px) {
+    .gallery h1 {
+        line-height: 90px;
+        font-size:40px;
+    }
+}
+
+.gallery-img {
+    
+}
+
+.gallery-img img{
+   width:90%;
+    height:200px;
+    border:15px solid #fff;
+    box-shadow:1px 1px 8px 4px lightgrey;
+    border-radius:7px;
+    display:block;
+    margin:10px auto;
+}
